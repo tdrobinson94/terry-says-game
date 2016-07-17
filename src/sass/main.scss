@@ -1,0 +1,117 @@
+.container{
+  display: flex;
+  justify-content: center;
+  .game-container{
+
+    .title-box{
+      display: block;
+      text-align: center;
+      .title{
+        display: inline-block;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px;
+        background-color: black;
+        color: white;
+      }
+    }
+    .board-container{
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 550px;
+      height: 550px;
+      border-radius: 50px;
+      background-color: black;
+      position: relative;
+      .begin-game{
+        .start-button{
+          background-color: transparent;
+          color: white;
+          border: none;
+          font-size: 50px;
+          position: absolute;
+          top: 35%;
+          left: 15%;
+          transition: color .2s ease-in-out;
+        }
+        .start-button:hover{
+          color: black;
+          transition: color .2s ease-in-out;
+        }
+      }
+      .game-over{
+        position: absolute;
+        top: 55%;
+        left: 55%;
+        display: flex;
+        text-align: center;
+        flex-wrap: wrap;
+        width: 150px;
+        .game-over-text{
+          font-size: 50px;
+          color: black;
+          z-index: 3;
+        }
+      }
+      .level-count{
+        position: absolute;
+        top: 46%;
+        left: 48%;
+        display: inline-block;
+        .count{
+          font-size: 40px;
+          color: white;
+          z-index: 3;
+        }
+      }
+      .score-count{
+        position: absolute;
+        bottom: 10px;
+        right: 40px;
+        display: inline-block;
+        .score{
+          font-size: 30px;
+          color: white;
+          z-index: 3;
+        }
+      }
+      .board{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 500px;
+        border-radius: 100%;
+        overflow: hidden;
+        .color{
+          height: 250px;
+          width: 250px;
+        }
+        .color:active{
+          opacity: .5;
+        }
+        .orange{
+          background-color: rgb(255, 92, 51);
+          border-bottom-right-radius: 70px;
+        }
+        .blue{
+          background-color: rgb(26, 83, 255);
+          border-bottom-left-radius: 70px;
+        }
+        .green{
+          background-color: rgb(51, 255, 173);
+          border-top-right-radius: 70px;
+        }
+        .yellow{
+          background-color: rgb(255, 255, 102);
+          border-top-left-radius: 70px;
+        }
+      }
+    }
+  }
+}
+.disappear{
+  display: none;
+}
