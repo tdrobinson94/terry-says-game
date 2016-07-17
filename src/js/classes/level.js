@@ -1,5 +1,5 @@
 import _ from 'lodash';
-let choices = ['orange', 'yellow', 'blue', 'green'];
+let choices = ['orange', 'blue', 'green', 'yellow'];
 
 class Level {
   constructor() {
