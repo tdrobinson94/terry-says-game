@@ -22,7 +22,7 @@ class Game {
   }
   Select(color){
   if(this.status == false){
-    // alert('Please click Start to begin');
+    alert('Please click Start to begin');
   } else if (this.status == true){
     if (this.level.sequence[this.clickedIndex] == color){
       this.clickedColor.push(color);
