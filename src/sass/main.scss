@@ -33,7 +33,7 @@
           border: none;
           font-size: 50px;
           position: absolute;
-          top: 35%;
+          bottom: 55%;
           left: 15%;
           transition: color .2s ease-in-out;
         }
@@ -114,4 +114,7 @@
 }
 .disappear{
   display: none;
+}
+.flash{
+  opacity: .5;
 }

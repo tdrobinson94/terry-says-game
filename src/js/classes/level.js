@@ -11,6 +11,7 @@ class Level {
     this.stage ++;
     let newColor = _.sampleSize(choices, 1);
     this.sequence = this.sequence.concat(newColor);
+    // $().addClass('flash');
     this.score = ((this.score + 5) * 2) - 5;
   }
 

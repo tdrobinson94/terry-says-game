@@ -126,6 +126,7 @@ describe("The game called Terry Say's", function () {
       newGame.gameStart();
       expect(newGame.status).to.equal(true);
       expect(level.stage).to.equal(1);
+
     });
 
   });

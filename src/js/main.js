@@ -21,6 +21,7 @@ $('.green').on('click', function(){
   console.log(newGame.clickedColor);
 });
 
+
 $('.yellow').on('click', function(){
   newGame.Select('yellow');
   console.log(newGame.clickedColor);
