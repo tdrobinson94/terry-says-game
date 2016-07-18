@@ -2,39 +2,49 @@ import {Level} from './level';
 import $ from 'jquery';
 
 class Game {
-  constructor(level) {
+  constructor() {
     this.status = false;
+    this.started = false;
     this.level = new Level();
-    this.clickedColor = [];
-    this.clickedIndex = 0;
+    this.clickedColor = '';
+    this.selectedColors = [];
+    this.sequenceIndex = 0;
+    // this.clickedIndex = 1;
   }
   gameStart(){
     this.status = true;
-    $('.board-container').append(`
-    <form class="begin-game">
-      <button class="start-button">Play <br> Again</button>
-    </form>`);
+    this.started = true;
+    this.level = new Level();
+    this.selectedColors = [];
+    this.sequenceIndex = 0;
+    this.clickedColor = '';
+    $('.game-over').addClass('disappear');
+    this.level.nextStage();
   }
   gameOver(){
     this.status = false;
-    $('.game-over').html(`<span class="game-over-text">GAME OVER</span>`);
+    $('.game-over').removeClass('disappear').html(`<span class="game-over-text">GAME OVER</span>`);
+    $('.start-button').removeClass('disappear').html(`<button class="start-button">Play<br>Again</button>`);
   }
   Select(color){
-  if(this.status == false){
-    alert('Please click Start to begin');
-  } else if (this.status == true){
-    if (this.level.sequence[this.clickedIndex] == color){
-      this.clickedColor.push(color);
-      this.clickedIndex ++;
-      if(this.level.sequence.length == this.clickedColor.length){
-        this.level.nextStage();
-        this.clickedIndex = 0;
-        this.clickedColor = [];
-      }
-    } else{
-      this.gameOver();
-      this.gameStart();
-
+    this.clickedColor = color;
+    console.log(this.clickedColor);
+    this.Check();
+  }
+  Check(){
+    if(this.status == true){
+      if (this.level.sequence[this.sequenceIndex] == this.clickedColor){
+        this.selectedColors.push(this.clickColor);
+        this.sequenceIndex ++;
+        if(this.level.sequence.length == this.selectedColors.length){
+          this.level.nextStage();
+          console.log('sequence:',this.level.sequence);
+          this.sequenceIndex = 0;
+          this.clickedColor = '';
+          this.selectedColors = [];
+        }
+      } else {
+        this.gameOver();
       }
     }
   }

@@ -129,6 +129,12 @@ describe("The game called Terry Say's", function () {
 
     });
 
+    it("should have the color red", function(){
+      let newGame = new Game();
+      newGame.Select('red');
+      expect(newGame.clickedColor).to.equal('red');
+    });
+
   });
 
 });

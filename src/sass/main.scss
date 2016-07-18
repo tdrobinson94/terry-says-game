@@ -92,7 +92,7 @@
         .color:active{
           opacity: .5;
         }
-        .orange{
+        .red{
           background-color: rgb(255, 92, 51);
           border-bottom-right-radius: 70px;
         }
@@ -113,7 +113,7 @@
   }
 }
 .disappear{
-  display: none;
+  display: none !important;
 }
 .flash{
   opacity: .5;
