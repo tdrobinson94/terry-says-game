@@ -57,10 +57,12 @@
         }
       }
       .level-count{
+        display: flex;
+        justify-content: center;
+        width: 40px;
         position: absolute;
-        top: 46%;
-        left: 48%;
-        display: inline-block;
+        top: 45.9%;
+        left: 46.3%;
         .count{
           font-size: 40px;
           color: white;

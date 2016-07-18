@@ -13,7 +13,7 @@ class Level {
     let newColor = _.sampleSize(choices, 1);
     this.sequence = this.sequence.concat(newColor);
     this.flashColors();
-    this.score = ((this.score + 5) * 2) - 5;
+    this.score = (this.score + 5);
     $('.level-count').html(`<span class="count">${this.stage}</span>`);
     $('.score-count').html(`<span class="score">Score: ${this.score}</span>`);
   }
