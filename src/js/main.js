@@ -5,7 +5,6 @@ import {Level} from './classes/level';
 
 let level = new Level();
 let newGame = new Game();
-let audio = $('audio')[0];
 
 $('.red').on('click', function(){
   newGame.Select('red');
